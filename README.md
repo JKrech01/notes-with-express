@@ -12,9 +12,9 @@ The application’s front end has already been created. Create the back end, con
 
 ## Links
 
-*  The URL of the functional, deployed application.
+*  [The URL of the functional, deployed application.](https://notes-with-express-4d95.onrender.com/)
 
-*  The URL of the GitHub repository, with a unique name and a README describing the project.
+*  [The URL of the GitHub repository, with a unique name and a README describing the project.](https://github.com/JKrech01/notes-with-express)
 
 ## Project Status
 This is a work-in-progress which will be evolving over time.
