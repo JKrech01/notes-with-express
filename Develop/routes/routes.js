@@ -71,7 +71,7 @@ router.delete('/api/notes/:id', (req, res) => {
   });
 });
 
-module.exports = routes;
+module.exports = router;
 
 // // The following HTML routes should be created:
 
