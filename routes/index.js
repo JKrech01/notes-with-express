@@ -7,9 +7,9 @@ const { v4: uuidv4 } = require('uuid');
 //const notesRouter = require('./notes');
  
 
-router.get('/notes', (req, res) => {
-  res.sendFile(path.join(__dirname, '../public/pages/notes.html'));
-});
+// router.get('/notes', (req, res) => {
+//   res.sendFile(path.join(__dirname, '../public/pages/notes.html'));
+// });
 
 router.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../public/index.html'));
@@ -122,4 +122,4 @@ module.exports = router;
 //   res.json(note);
 // });
 
-// module.exports = routes;
+//module.exports = routes;
