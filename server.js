@@ -45,15 +45,15 @@ app.listen(3001, () => {
 });
 
 app.get('/', (req, res) =>
-    res.sendFile(path.join(__dirname, '/public/index.html'))
+    res.sendFile(path.join(__dirname, './public/index.html'))
 );
 
 app.get('/notes', (req, res) =>
-    res.sendFile(path.join(__dirname, '/public/pages/notes.html'))
+    res.sendFile(path.join(__dirname, './public/notes.html'))
 );
 
-app.get('/api/notes', (req, res) => {
-    fs.readFile(path.join(__dirname, '../db/db.json'), 'utf8', (err, data) => {
+app.get('/notes', (req, res) => {
+    fs.readFile(path.join(__dirname, 'db.json'), 'utf8', (err, data) => {
         if (err) {
             console.error(err);
             return res.status(500).json({ error: 'Internal Server Error' });
@@ -64,10 +64,10 @@ app.get('/api/notes', (req, res) => {
 });
 
 app.get('/index', (req, res) =>
-    res.sendFile(path.join(__dirname, '/public/index.html'))
+    res.sendFile(path.join(__dirname, './public/index.html'))
 );
 
-app.post('/api/notes', (req, res) => {
+app.post('/notes', (req, res) => {
     const { title, text } = req.body;
     if (!title || !text) {
         return res.status(400).json({ error: 'Request body is incomplete' });
@@ -98,7 +98,7 @@ app.post('/api/notes', (req, res) => {
     });
 });
 
-app.delete('/api/notes/:id', (req, res) => {
+app.delete('/notes/:id', (req, res) => {
     const { id } = req.params;
     if (!id) {
         return res.status(400).json({ error: 'Request body is incomplete' });
