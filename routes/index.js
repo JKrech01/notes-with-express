@@ -4,12 +4,12 @@ const path = require('path');
 const { v4: uuidv4 } = require('uuid');
 
 // Import the notes router
-//const notesRouter = require('./notes');
+const notesRouter = require('./notes');
  
 
-// router.get('/notes', (req, res) => {
-//   res.sendFile(path.join(__dirname, '../public/pages/notes.html'));
-// });
+router.get('/notes', (req, res) => {
+   res.sendFile(path.join(__dirname, '../public/pages/notes.html'));
+ });
 
 router.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../public/index.html'));
@@ -71,7 +71,7 @@ router.delete('/api/notes/:id', (req, res) => {
   });
 });
 
-module.exports = router;
+module.exports = routes;
 
 // // The following HTML routes should be created:
 
